@@ -1,6 +1,7 @@
 <?php
 
 
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\TagsController;
 use App\Http\Controllers\BrandController;
@@ -11,7 +12,6 @@ use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\AdminRegisterController;
 use App\Http\Controllers\BlogCategoryController;
 use App\Http\Controllers\ContactController;
-use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -83,7 +83,7 @@ Route::middleware('auth')->group(function () {
         Route::resource('admin/productCategory',CategoriesController::class);
         Route::resource('tags',TagsController::class);
         Route::resource('brands',BrandController::class);
-        Route::resource('productCategory',CategoriesController::class);
+        // Route::resource('productCategory',CategoriesController::class);
         Route::resource('blogCategory',BlogCategoryController::class);
         Route::resource('contact',ContactController::class);
         // Route::get('/', function()
